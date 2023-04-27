@@ -1,7 +1,7 @@
 from tkinter import *
 s=Tk()
 s.geometry('800x800')
-s.resizable(False,False)
+# s.resizable(False,False)
 s.title('Students Mark Sheet')
 s.configure(bg='white')
 
@@ -13,45 +13,44 @@ l1.place(x=5,y=60)
 l2=Entry(s,width=20,border=2)
 l2.place(x=55,y=60)
 
-
 l3=Label(s,text='Roll No:', bg="white",fg='black')
 l3.place(x=200,y=60)
 l4=Entry(s,width=20,border=2)
 l4.place(x=250,y=60)
 
-l5=Label(s,text='SUBJECTS', bg="black",fg='white',font='bold',width=20, borderwidth=1,relief='solid',highlightthickness=1,highlightcolor='white')
+l5=Label(s,text='SUBJECTS', bg="grey",fg='black',font=("arial bold",11),width=20, borderwidth=1,relief='solid',highlightthickness=1,highlightcolor='white')
 l5.place(x=5,y=150)
-l6=Label(s,text='MARKS', bg="black",fg='white',font='bold',width=20, borderwidth=1,relief='solid',highlightthickness=1,highlightcolor='white')
+l6=Label(s,text='MARKS', bg="grey",fg='black',font=("arial bold",11),width=20, borderwidth=1,relief='solid',highlightthickness=1,highlightcolor='white')
 l6.place(x=185,y=150)
-l7=Label(s,text='GRADE', bg="black",fg='white',font='bold',width=20, borderwidth=1,relief='solid',highlightthickness=1,highlightcolor='white')
+l7=Label(s,text='GRADE', bg="grey",fg='black',font=("arial bold",11),width=20, borderwidth=1,relief='solid',highlightthickness=1,highlightcolor='white')
 l7.place(x=365,y=150)
 
-l8=Label(s,text='ENGLISH', bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l8=Label(s,text='ENGLISH', bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l8.place(x=5,y=174)
-l9=Entry(bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l9=Entry(s,bg='light grey',fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l9.place(x=185,y=174)
-l10=Entry(bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l10=Entry(bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l10.place(x=365,y=174)
 
-l11=Label(s,text='HINDI', bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l11=Label(s,text='HINDI', bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l11.place(x=5,y=198)
-l12=Entry(bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l12=Entry(bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l12.place(x=185,y=198)
-l13=Entry(bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l13=Entry(bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l13.place(x=365,y=198)
 
-l14=Label(s,text='SCIENCE', bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l14=Label(s,text='SCIENCE', bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l14.place(x=5,y=222)
-l15=Entry(bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l15=Entry(bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l15.place(x=185,y=222)
-l16=Entry(bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l16=Entry(bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l16.place(x=365,y=222)
 
-l17=Label(s,text='MATHS', bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l17=Label(s,text='MATHS', bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l17.place(x=5,y=246)
-l18=Entry(bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l18=Entry(bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l18.place(x=185,y=246)
-l19=Entry(bg="grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
+l19=Entry(bg="light grey",fg='black',font='bold',width=20, borderwidth=1,relief='solid')
 l19.place(x=365,y=246)
 
 def submit():
@@ -109,13 +108,13 @@ def submit():
     l42=Label(s,text='PERCENTAGE OBTAINTED:',bg='white',font=('arial',8))
     l42.place(x=5,y=630)
     l43=Label(s,text=int(l9.get())+int(l12.get())+int(l15.get())+int(l18.get()),bg='white',fg='red')
+    l43.pack()
     l43.place(x=120,y=610)
-    l44=Label(s,text=int(l9.get())+int(l12.get())+int(l15.get())+int(l18.get()*(0.4)),bg='white',fg='red')
+    l44=Label(s,text=(int(l9.get())+int(l12.get())+int(l15.get())+int(l18.get()))*0.4,bg='white',fg='red')
     l44.place(x=140,y=630)
 
 sub=Button(s,text='SUBMIT',bg='light blue',fg='white',command=submit)
 sub.place(x=450,y=280)
-
 
 
 s.mainloop()
