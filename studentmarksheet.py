@@ -1,7 +1,7 @@
 from tkinter import *
 s=Tk()
 s.geometry('800x800')
-# s.resizable(False,False)
+s.resizable(False,False)
 s.title('Students Mark Sheet')
 s.configure(bg='white')
 
